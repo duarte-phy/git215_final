@@ -1,0 +1,280 @@
+/* -- Start CSS Reset -- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -- End CSS Reset -- */
+
+/* --- CSS Stylesheet Start --- */
+/* Angel Duarte */
+
+@font-face {
+    font-family: spongeboy;
+    src: url(fonts/SpongeboyKontraDusiciel-rV1L.ttf);
+
+    font-family: bauhaus;
+    src: url(fonts/RezlandLogotypeFont-vZpM.ttf);
+}
+
+:root{
+	/* Custom Colors */
+	--dk-green: #263f3f;
+
+    --lt-gray: #777c7e;
+	--med-gray: #494f52;
+	--dk-gray: #2e3234;
+
+    --off-white:  #c0cbcf;
+
+	/* Fonts */
+	--font-title: spongeboy, 'Franklin Gothic Medium', sans-serif;
+    --font-secondary: bauhaus, 'Franklin Gothic Medium', sans-serif;
+
+}
+
+*{
+	color-scheme: light dark;
+    line-height: 1.4;
+    color: var(--off-white);
+    font-size: 1rem;
+
+}
+
+header, main, footer{
+    width: 1440px;
+}
+
+header{
+    margin: 5px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    font-family: var(--font-secondary);
+    gap: 2rem;
+}
+
+header h1{
+    font-size: xxx-large;
+    font-weight: bold;
+    color: orange;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    margin: auto;
+
+    font-size: x-large;
+}
+
+header a:hover{
+    display: inline-block;
+    font-weight: bolder;
+    text-decoration: none;
+    color: red;
+    background-color: var(--dk-gray);
+    box-shadow: 0 0.1rem 2rem 0 var(--med-gray);
+}
+
+header img{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+}
+
+header img{
+    box-shadow: 0.5rem 0.5rem 2rem darkred;
+}
+
+main img{
+    box-shadow: 0.1rem 0.1rem 2rem black;
+}
+
+main{
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 60%;
+}
+
+main h2{
+    display: block;
+    background-color: darkorange;
+
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    color: var(--dk-gray);
+
+    margin: 1rem auto;
+    max-width: 50%;
+    text-align: center;
+}
+
+main h3{
+    display: inline-block;
+    border: 4px solid darkorange;
+    border-radius: 0 2rem;
+
+    font-size: x-large;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    color: darkorange;
+
+    margin: auto;
+    text-align: center;
+
+}
+
+section.content-group{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem 1.4rem;
+    margin: 3rem auto;
+}
+
+main#contact-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+
+}
+
+main#contact-page h2{
+    display: inline-block;
+    grid-column: 1/-1;
+    padding: 0 1rem;
+    margin: 1rem 0;
+
+}
+
+section #right-column{
+    display: flex;
+    flex-direction: row;
+}
+
+#right-column form > *{
+    display: block;
+    width: 70%;
+    text-transform: capitalize;
+    margin: 0.5rem;
+}
+
+#right-column form label, #right-column button{
+    margin-top: 1rem;
+}
+
+#right-column form input, #right-column textarea{
+    margin-bottom: 1rem;
+}
+
+#right-column form input:focus, #right-column textarea:focus{
+    border: 4px outset darkred;
+}
+
+#right-column form input:hover, #right-column textarea:hover{
+    background-color: var(--med-gray);
+}
+
+#right-column form input:invalid, #right-column textarea:invalid{
+    color: red;
+    box-shadow: 4px 0 2rem darkred;
+}
+
+#right-column fieldset{
+    border: 4px solid var(--dk-gray);
+    border-radius: 3px;
+}
+
+#right-column fieldset > *{
+    margin: 0 0 1rem 1rem;
+}
+
+#right-column fieldset input[type="radio"]{
+    padding-bottom: 1rem;
+}
+
+#right-column textarea{
+    height: 4rem;
+    text-transform: none;
+}
+
+#right-column button{
+    font-family: var(--font-secondary);
+    font-size: x-large;
+    color: red;
+}
+
+#right-column button:hover{
+    color: orange;
+    font-weight: bold;
+    background-color: var(--med-gray);
+}
+
+.required{
+    color: red;
+    font-weight: bolder;
+}
+
+p{
+    margin: 1rem 0;
+}
+
+footer{
+    padding: 3rem;
+    margin: auto;
+    background-color: var(--dk-gray);
+
+    font-family: var(--font-title);
+    font-size: larger;
+    color: var(--off-white);
+    text-align:center;
+
+}
